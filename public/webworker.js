@@ -19,7 +19,6 @@ self.onmessage = async (event) => {
   await pyodideReadyPromise;
 
   try {
-    // console.log({ eventData: event.data });
     const { action, data } = event.data;
     const { fileStr, groups = [] } = data;
     const results = pyFuncs.groupDataframe(

@@ -29,6 +29,7 @@ const FileLoad = () => {
     setRawFileContent,
     setRunningWorker,
     setProcessedContent,
+    setGroups,
   } = useAppContext();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
@@ -87,6 +88,8 @@ const FileLoad = () => {
             onClick={(event) => {
               event.stopPropagation();
               setSelectedFile(null);
+              setProcessedContent(DEFAULT_PROCESS_DATA);
+              setGroups([]);
             }}
           >
             <MdOutlineClose />
